@@ -251,13 +251,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\tSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+  m_Text: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
     doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
     et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
     quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
@@ -267,7 +267,7 @@ MonoBehaviour:
     enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
     nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
     qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-    dolorem eum fugiat quo voluptas nulla pariatur?"
+    dolorem eum fugiat quo voluptas nulla pariatur?
 --- !u!222 &314725100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -550,6 +550,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1519472546}
   m_CullTransparentMesh: 0
+--- !u!1 &1675397921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675397923}
+  - component: {fileID: 1675397922}
+  m_Layer: 0
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1675397922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1675397921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50571d97bc25a49f996462628bd50d62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 314725099}
+--- !u!4 &1675397923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1675397921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726305984
 GameObject:
   m_ObjectHideFlags: 0

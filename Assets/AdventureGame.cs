@@ -6,24 +6,33 @@ using System;
 
 public class AdventureGame : MonoBehaviour
 {
-
     [SerializeField] Text textComponent;
+    [SerializeField] State startingState;
 
-    // Use this for initialization
+    State state;
+
     void Start()
     {
-        textComponent.text = 
-            "Welcome to the text adventure." +
-            Environment.NewLine + Environment.NewLine +
-            @"You are sitting in front of a computer, basking in the green glow of the screen. Your belly is still full from supper, and you feel vague and lackadaiscal. Suddenly an idea pops into your head: 'I should program something!' Do you" +
-            Environment.NewLine + Environment.NewLine +
-            "\t(A) fire up Visual Studio Code and begin programming, or" +
-            Environment.NewLine + 
-            "\t(B) get up from the computer and play Persona 5?";
+        state = startingState;
+        textComponent.text = state.GetStateStory();
     }
-    // Update is called once per frame
+
     void Update()
     {
+        ManageState();
+    }
 
+    private void ManageState()
+    {
+        var nextStates = state.GetNextStates();
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            state = nextStates[0];
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            state = nextStates[1];
+        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            state = nextStates[2];
+        }
+        textComponent.text = state.GetStateStory();
     }
 }

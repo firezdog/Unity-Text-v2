@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 public class AdventureGame : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
+    [SerializeField] TMP_Text titleComponent;
+    [SerializeField] TMP_Text textComponent;
     [SerializeField] State startingState;
 
     State state;
@@ -15,6 +17,7 @@ public class AdventureGame : MonoBehaviour
     {
         state = startingState;
         textComponent.text = state.GetStateStory();
+        titleComponent.text = state.GetStateTitle();
     }
 
     void Update()
@@ -25,14 +28,17 @@ public class AdventureGame : MonoBehaviour
     private void ManageState()
     {
         var nextStates = state.GetNextStates();
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            state = nextStates[0];
+
+        /* Loop through each state and check whether current 
+        input corresponds to that state. If this happens on each
+        update, seems like it would be very inefficient? */
+        for (int i = 0; i < nextStates.Length; i++) 
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+            { state = nextStates[i]; }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            state = nextStates[1];
-        } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            state = nextStates[2];
-        }
+
         textComponent.text = state.GetStateStory();
+        titleComponent.text = state.GetStateTitle();
     }
 }

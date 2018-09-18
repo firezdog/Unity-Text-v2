@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467e1946cca1492f962ab5a2fec8884, type: 3}
+  m_Name: Starting
+  m_EditorClassIdentifier: 
+  storyText: 'Welcome to my text adventure.  Read the text and choose from the options
+    presented.  Different choices will lead to different outcomes.  Have fun exploring!
+
+
+    1.  Get started.'
+  storyTitle: Welcome To The Game
+  nextStates:
+  - {fileID: 11400000, guid: d161ca91ecfee4605bf3345b9da90e4a, type: 2}

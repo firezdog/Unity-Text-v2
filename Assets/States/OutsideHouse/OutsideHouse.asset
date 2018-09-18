@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467e1946cca1492f962ab5a2fec8884, type: 3}
+  m_Name: OutsideHouse
+  m_EditorClassIdentifier: 
+  storyText: 'You are standing outside an old house.  Ahead of you a door, whose once
+    white paint has now peeled mostly away, stands ever so slightly ajar.
+
+
+    1.  Open the door and go in.
+
+    2.  Explore the area.'
+  storyTitle: Outside The Old House
+  nextStates:
+  - {fileID: 11400000, guid: 7dfb19f2d685642308e7cb8b7e8e90bb, type: 2}
+  - {fileID: 11400000, guid: ab0de61355f5c450b922359ef44d1d95, type: 2}

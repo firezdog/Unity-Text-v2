@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467e1946cca1492f962ab5a2fec8884, type: 3}
+  m_Name: LookAround
+  m_EditorClassIdentifier: 
+  storyText: 'The house is very large.  You walk along the wall until you reach a
+    kind of alley.  At the end of the alley is a wooden cellar door.  Stooping above
+    the door, you are surprised by the heat of the air.  It is as if a very hot fire
+    burned on the other side.
+
+
+    1.  Try to open the door.
+
+    2.  Return to the front of the house.'
+  storyTitle: A Hot Cellar Door
+  nextStates:
+  - {fileID: 11400000, guid: a8d19519e05dc4766a596e8f3064725d, type: 2}
+  - {fileID: 11400000, guid: d161ca91ecfee4605bf3345b9da90e4a, type: 2}

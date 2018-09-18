@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4467e1946cca1492f962ab5a2fec8884, type: 3}
+  m_Name: TryOpenCellar
+  m_EditorClassIdentifier: 
+  storyText: 'You spy a rusty copper handle on the surface of the trap door and move
+    to grab it.  You reflexively pull your hand back and groan: it''s too hot.  What
+    amazes you is that the wooden door hasn''t burst to flames from the heat of whatever
+    burns on the other side.  You''ll have to find another way into the house.
+
+
+    1. Go back to the main entrace.'
+  storyTitle: Trying The Cellar Door
+  nextStates:
+  - {fileID: 11400000, guid: d161ca91ecfee4605bf3345b9da90e4a, type: 2}

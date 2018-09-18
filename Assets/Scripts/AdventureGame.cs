@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public class AdventureGame : MonoBehaviour
 {
@@ -28,14 +30,12 @@ public class AdventureGame : MonoBehaviour
     private void ManageState()
     {
         var nextStates = state.GetNextStates();
-
-        /* Loop through each state and check whether current 
-        input corresponds to that state. If this happens on each
-        update, seems like it would be very inefficient? */
-        for (int i = 0; i < nextStates.Length; i++) 
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1 + i))
-            { state = nextStates[i]; }
+        
+        // Get user input and try to convert to integer. If the integer corresponds to one of the next states, (converting from 0-based index), set state as corresponding state. We also rule out the case where input is 0, since by default Input.inputString gives 0.
+        int input;
+        Int32.TryParse(Input.inputString, out input);
+        if (0 < input && input - 1 < nextStates.Length) {
+            state = nextStates[input - 1];
         }
 
         textComponent.text = state.GetStateStory();
